@@ -1,105 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ShubhamClothes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Clothes</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      background-color: #f7f7f7;
     }
-    h1 {
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      color: #222;
     }
-    .welcome {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .hero {
+      padding: 40px;
+      text-align: center;
     }
-    .product-grid {
+    .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
+      padding: 20px;
     }
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .product {
+      background-color: #fff;
       padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .card img {
+    .product img {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 10px;
+      height: auto;
+      border-radius: 8px;
     }
-    .card h2 {
-      font-size: 18px;
-      margin: 10px 0 5px;
-    }
-    .card p {
-      margin: 0;
-      color: #666;
-    }
-    .card .price {
-      font-weight: bold;
-      color: #111;
-      margin: 10px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      margin-top: 10px;
-      text-decoration: none;
-    }
-    .btn:hover {
-      background: #0f5bdc;
-    }
-  </style>
-</head>
-<body>
+    .upi-box {
 
-  <div class="welcome">
-    <h1>Welcome to ShubhamClothes 👕</h1>
-    <p style="text-align:center;">This is our official online store. Explore our collection and pay directly using UPI!</p>
-  </div>
-
-  <div class="product-grid">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x240?text=T-Shirt+1" alt="Product">
-      <h2>Stylish T-Shirt</h2>
-      <p>100% Cotton | All Sizes</p>
-      <div class="price">₹499</div>
-      <a class="btn" href="upi://pay?pa=8619984958@ybl&pn=Shubham%20Clothes&am=499&cu=INR" target="_blank">Pay via UPI</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300x240?text=Hoodie" alt="Product">
-      <h2>Printed Hoodie</h2>
-      <p>Soft Fabric | Winter Wear</p>
-      <div class="price">₹799</div>
-      <a class="btn" href="upi://pay?pa=8619984958@ybl&pn=Shubham%20Clothes&am=799&cu=INR" target="_blank">Pay via UPI</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300x240?text=Kurta" alt="Product">
-      <h2>Designer Kurta</h2>
-      <p>Ethnic Look | New Arrival</p>
-      <div class="price">₹599</div>
-      <a class="btn" href="upi://pay?pa=8619984958@ybl&pn=Shubham%20Clothes&am=599&cu=INR" target="_blank">Pay via UPI</a>
-    </div>
-  </div>
-
-</body>
-</html>
