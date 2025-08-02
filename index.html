@@ -1,87 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shubham Clothes - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shubham's T-Shirts</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f8f8f8;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-    .header {
-      background: #111;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-    .banner {
-      background: url('https://via.placeholder.com/1200x400?text=Welcome+to+Shubham+Clothes') no-repeat center center/cover;
-      height: 300px;
-      border-bottom: 5px solid #007bff;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
+    body {
       background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: #333;
+    }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-    .product-img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-      margin-bottom: 15px;
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
     }
-    h2 {
-      margin-bottom: 5px;
-    }
-    p {
-      color: #555;
-    }
-    .btn-next {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 18px;
-      background: #007bff;
+    nav a {
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      margin: 0 15px;
       text-decoration: none;
     }
-    .btn-next:hover {
-      background: #0056b3;
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1581578017426-e8b3c92b3595?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 32px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .products {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .products h2 {
+      margin-bottom: 30px;
+    }
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      background: #f9f9f9;
+    }
+    .product-card h3 {
+      margin-bottom: 10px;
+    }
+    .product-card p {
+      margin-bottom: 15px;
+    }
+    .product-card button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #218838;
+    }
+    .contact {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f1f1f1;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 600px;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Shubham Clothes</h1>
-    <p>Your style, our passion!</p>
-  </div>
+  <header>
+    <h1>Shubham's T-Shirts</h1>
+  </header>
 
-  <div class="banner"></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+  </nav>
 
-  <div class="container">
-    <img src="https://via.placeholder.com/300x300?text=Stylish+T-Shirt" alt="T-shirt" class="product-img" />
-    <h2>Stylish T-Shirt</h2>
-    <p>Only ₹499 - High-quality and super comfortable!</p>
+  <section class="hero">
+    <h1>Trendy T-Shirts for Everyone</h1>
+  </section>
 
-    <a class="btn-next" href="payment.html">Next</a>
-  </div>
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>T-Shirt 1</h3>
+        <p>Classic Black Tee<br>₹199</p>
+        <button onclick="window.location.href='payment.html'">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <h3>T-Shirt 2</h3>
+        <p>White Graphic Tee<br>₹249</p>
+        <button onclick="window.location.href='payment.html'">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <h3>T-Shirt 3</h3>
+        <p>Streetwear Tee<br>₹299</p>
+        <button onclick="window.location.href='payment.html'">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h3>Contact & Payment Info</h3>
+    <p><strong>Mobile:</strong> 8306091494</p>
+    <p><strong>Email:</strong> meenamehulakumar01@gmail.com</p>
+    <p><strong>UPI ID:</strong> 9819948949@apl</p>
+    <p>To buy a t-shirt, contact me or use the UPI ID for payment and send details on WhatsApp</p>
+  </section>
+
+  <footer>
+    Instagram | Facebook | Contact Us<br>
+    © 2025 Shubham's T-Shirts. All rights reserved.
+  </footer>
 
 </body>
 </html>
-
-
