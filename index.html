@@ -3,144 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shubham's T-Shirts Shop</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+  <title>Shubham Clothes</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #222; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-    header { background: #222; color: #fff; padding: 1rem 0; }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-    nav { display: flex; justify-content: space-between; align-items: center; }
-    nav a { color: #fff; text-decoration: none; margin: 0 1rem; font-weight: 700; }
-    nav a:hover { text-decoration: underline; }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover;
-      color: #fff;
-      padding: 4rem 0 6rem;
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
 
-    .product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem 0;
+    nav {
+      background-color: #444;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
     }
 
     .product {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      width: 250px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      text-align: center;
+      background-color: white;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .product img {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
 
-    .product h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .product p { font-size: 1rem; margin-bottom: 0.5rem; }
+    .product h3 {
+      margin: 10px 0;
+    }
 
     .contact-payment {
-      background: #fff;
-      max-width: 500px;
-      margin: 2rem auto 0;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-
-    .contact-payment h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-    .contact-payment p { margin-bottom: 0.7rem; font-size: 1.05rem; }
-    .contact-payment strong { color: #222; }
 
     footer {
-      background: #222;
-      color: #fff;
+      background-color: #333;
+      color: white;
       text-align: center;
-      padding: 1.5rem 0;
-      margin-top: 3rem;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
     }
 
-    .footer-links a {
-      color: #ff9800;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
-    .footer-links a:hover { text-decoration: underline; }
-
-    .next-btn {
+    .next-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #28a745;
       color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
+      padding: 14px 24px;
       font-size: 16px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.3s;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+      z-index: 999;
     }
 
-    .next-btn:hover { background-color: #218838; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .product { width: 90%; }
+    .next-button:hover {
+      background-color: #218838;
     }
   </style>
 </head>
-
 <body>
+
   <header>
-    <div class="container">
-      <nav>
-        <div style="font-size:1.5rem;font-weight:700;">Shubham's T-Shirts</div>
-        <div>
-          <a href="#">Home</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
-    </div>
+    <h1>Shubham Clothes</h1>
+    <p>Affordable and Stylish Clothing</p>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Trendy T-Shirts for Everyone</h1>
-      <p>Discover unique designs, premium quality, and fast shipping. Shop your style now!</p>
-    </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Shubham Clothes</h2>
+    <p>Shop our latest collection of affordable fashion</p>
   </section>
 
-  <section class="product-list container">
+  <section id="products">
+    <h2>Our Products</h2>
     <div class="product">
-      <img src="https://via.placeholder.com/250" alt="T-shirt 1">
-      <h2>Classic White Tee</h2>
-      <p>Price: ₹499</p>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/250" alt="T-shirt 2">
-      <h2>Black Edition Tee</h2>
-      <p>Price: ₹549</p>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/250" alt="T-shirt 3">
-      <h2>Graphic Street Tee</h2>
-      <p>Price: ₹599</p>
-    </div>
-    <!-- NEW PRODUCT -->
-    <div class="product">
-      <img src="https://via.placeholder.com/250x250.png?text=Summer+Seller+Tees" alt="Summer Seller Tees">
-      <h2>Summer Seller Tees</h2>
+      <img src="https://i.ibb.co/TgM7ZVf/summer-seller-tees.jpg" alt="Summer Seller Tees">
+      <h3>Summer Seller Tees</h3>
       <p>Price: ₹250</p>
     </div>
   </section>
@@ -154,16 +134,10 @@
   </section>
 
   <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="#">Instagram</a> |
-        <a href="#">Facebook</a> |
-        <a href="#contact">Contact Us</a>
-      </div>
-      <p>&copy; 2025 Shubham's T-Shirts. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Shubham Clothes. All rights reserved.</p>
   </footer>
 
-  <a href="payment.html" class="next-btn">Next</a>
+  <a href="cod.html" class="next-button">Next</a>
+
 </body>
 </html>
