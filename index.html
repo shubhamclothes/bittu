@@ -7,8 +7,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      background: url('https://i.imgur.com/N3N8i3p.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
@@ -17,25 +17,43 @@
       padding: 20px;
       text-align: center;
       font-size: 28px;
-      font-weight: bold;
     }
 
     .container {
-      padding: 40px;
       max-width: 800px;
-      margin: auto;
-    }
-
-    .info {
-      background: #fff;
+      margin: 40px auto;
       padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      font-size: 18px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
-    .info p {
+    .container p {
+      font-size: 18px;
       margin: 10px 0;
+    }
+
+    .product {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid #ddd;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product h2 {
+      margin: 10px 0 5px;
+      font-size: 22px;
+    }
+
+    .product p {
+      font-size: 18px;
+      color: #333;
     }
 
     .next-button {
@@ -50,7 +68,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       transition: background-color 0.3s ease;
-      z-index: 999;
+      z-index: 1000;
     }
 
     .next-button:hover {
@@ -59,16 +77,22 @@
   </style>
 </head>
 <body>
+
   <header>Welcome to Shubham Clothes</header>
 
   <div class="container">
-    <div class="info">
-      <p><strong>Mobile Number:</strong> 9116278456</p>
-      <p><strong>Email:</strong> shubhammeena7766@gmail.com</p>
-      <p><strong>UPI ID:</strong> shubhammeena7766@oksbi</p>
+    <p><strong>Mobile Number:</strong> 9116278456</p>
+    <p><strong>Email:</strong> shubhammeena7766@gmail.com</p>
+    <p><strong>UPI ID:</strong> shubhammeena7766@oksbi</p>
+
+    <div class="product">
+      <h2>Summer Seller Tees</h2>
+      <img src="https://i.imgur.com/JgW1oZL.png" alt="Summer Seller Tee">
+      <p><strong>Price:</strong> ₹250</p>
     </div>
   </div>
 
-  <a href="cod.html" class="next-button">Next</a>
+  <a class="next-button" href="cod.html">Next</a>
+
 </body>
 </html>
