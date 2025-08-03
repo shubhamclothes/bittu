@@ -2,74 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shubham Clothes</title>
+  <title>Shubham's T-Shirts</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      background: url('https://i.imgur.com/G0LZzyG.jpg') no-repeat center center fixed;
+      background: #f5f5f5;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #111;
+      text-align: right;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f');
       background-size: cover;
       color: white;
-    }
-
-    header {
-      background-color: black;
-      padding: 20px;
       text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
       font-size: 30px;
     }
-
-    .container {
-      max-width: 600px;
-      margin: 50px auto 20px;
-      background-color: rgba(0, 0, 0, 0.7);
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       padding: 30px;
+      flex-wrap: wrap;
+    }
+    .product {
+      background: white;
+      padding: 20px;
       border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
+      width: 200px;
     }
-
-    .container p {
-      font-size: 18px;
-      margin: 15px 0;
+    .product img {
+      width: 100%;
+      height: auto;
     }
-
-    .button-wrapper {
+    .info {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 14px;
+    }
+    footer {
+      background: #111;
+      color: orange;
       text-align: center;
-      margin-bottom: 50px;
+      padding: 20px;
+      font-size: 12px;
     }
-
     .next-button {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #28a745;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: orange;
       color: white;
-      font-size: 16px;
-      font-weight: bold;
       border: none;
+      padding: 12px 20px;
+      font-size: 16px;
       border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s;
+      cursor: pointer;
     }
-
     .next-button:hover {
-      background-color: #218838;
+      background: darkorange;
     }
   </style>
 </head>
 <body>
 
-  <header>Welcome to Shubham Clothes</header>
+<header>
+  <h1>Shubham's T-Shirts</h1>
+</header>
 
-  <div class="container">
-    <p><strong>Mobile:</strong> 8306091984</p>
-    <p><strong>Email:</strong> meenamamtakumari0@gmail.com</p>
-    <p><strong>UPI:</strong> 8619984958@ybl</p>
-  </div>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Contact</a>
+</nav>
 
-  <div class="button-wrapper">
-    <a href="cod.html" class="next-button">Next</a>
+<div class="hero">
+  <h1>Trendy T-Shirts for Everyone</h1>
+  <p>Discover unique designs, premium quality, and fast shipping. Shop your style now!</p>
+</div>
+
+<div class="products">
+  <div class="product">
+    <img src="https://via.placeholder.com/150" alt="T-shirt 1">
+    <h4>Classic White Tee</h4>
+    <p>Price: ₹499</p>
   </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/150" alt="T-shirt 2">
+    <h4>Black Edition Tee</h4>
+    <p>Price: ₹549</p>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/150" alt="T-shirt 3">
+    <h4>Graphic Street Tee</h4>
+    <p>Price: ₹599</p>
+  </div>
+</div>
+
+<div class="info">
+  <strong>Contact & Payment Info</strong><br><br>
+  <strong>Mobile:</strong> 8306919984<br>
+  <strong>Email:</strong> meenaramankumari0@gmail.com<br>
+  <strong>Payment (UPI ID):</strong> 8619894985@ybl<br><br>
+  To buy a t-shirt, contact me or use the UPI ID for payment and send details on WhatsApp!
+</div>
+
+<footer>
+  <a href="#">Instagram</a> | 
+  <a href="#">Facebook</a> | 
+  <a href="#">Contact Us</a><br>
+  © 2025 Shubham's T-Shirts. All rights reserved.
+</footer>
+
+<a href="payment.html">
+  <button class="next-button">Next</button>
+</a>
 
 </body>
 </html>
