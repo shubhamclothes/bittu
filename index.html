@@ -1,117 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham's T-Shirts Shop</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', Arial, sans-serif; background: #f9f9f9; color: #222; }
-        header { background: #222; color: #fff; padding: 1rem 0; }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-        nav { display: flex; justify-content: space-between; align-items: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 1rem; font-weight: 700; }
-        nav a:hover { text-decoration: underline; }
-        .hero { background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; padding: 4rem 0 6rem; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-        .hero .cta { background: #ff9800; color: #fff; padding: 0.8rem 2rem; border: none; border-radius: 3px; font-size: 1rem; cursor: pointer; }
-        .product-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem 0; }
-        .product { background: #fff; padding: 1rem; border-radius: 8px; width: 250px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
-        .product img { width: 100%; border-radius: 4px; margin-bottom: 1rem; }
-        .product h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .product p { font-size: 1rem; margin-bottom: 0.5rem; }
-        .contact-payment { background: #fff; max-width: 500px; margin: 2rem auto 0; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
-        .contact-payment h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .contact-payment p { margin-bottom: 0.7rem; font-size: 1.05rem; }
-        .contact-payment strong { color: #222; }
-        footer { background: #222; color: #fff; text-align: center; padding: 1.5rem 0; margin-top: 3rem; }
-        .footer-links a { color: #ff9800; margin: 0 0.5rem; text-decoration: none; }
-        .footer-links a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham's T-Shirts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav {
+      text-align: right;
+      padding: 10px 20px;
+      background-color: #222;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1f5');
+      background-size: cover;
+      background-position: center;
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .contact {
+      background-color: white;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .footer-links a {
+      color: orange;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    /* Next button */
+    .next-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div style="font-size:1.5rem;font-weight:700;">Shubham's T-Shirts</div>
-                <div>
-                    <a href="#">Home</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Trendy T-Shirts for Everyone</h1>
-            <p>Discover unique designs, premium quality, and fast shipping. Shop your style now!</p>
-        </div>
-    </section>
+  <header>
+    <h2>Shubham's T-Shirts</h2>
+  </header>
 
-    <section class="product-list container">
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="T-shirt 1">
-            <h2>Classic White Tee</h2>
-            <p>Price: ₹499</p>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="T-shirt 2">
-            <h2>Black Edition Tee</h2>
-            <p>Price: ₹549</p>
-        </div>
-        <div class="product">
-            <img src="https://via.placeholder.com/250" alt="T-shirt 3">
-            <h2>Graphic Street Tee</h2>
-            <p>Price: ₹599</p>
-        </div>
-    </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section id="contact" class="contact-payment">
-        <h2>Contact & Payment Info</h2>
-        <p><strong>Mobile:</strong> 8306091984</p>
-        <p><strong>Email:</strong> meenamamtakumari0@gmail.com</p>
-        <p><strong>Payment (UPI ID):</strong> 8619984958@ybl</p>
-        <p>To buy a t-shirt, contact me or use the UPI ID for payment and send details on WhatsApp!</p>
-    </section>
+  <section class="hero">
+    <h1>Trendy T-Shirts for Everyone</h1>
+    <p>Discover unique designs, premium quality, and fast shipping. <strong>Shop your style now!</strong></p>
+  </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Instagram</a> | 
-                <a href="#">Facebook</a> | 
-                <a href="#contact">Contact Us</a>
-            </div>
-            <p>&copy; 2025 Shubham's T-Shirts. All rights reserved.</p>
-        </div>
-    </footer>
-<a href="payment.html" class="next-btn">Next</a>
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/150x150?text=T-shirt+1" alt="T-shirt 1">
+      <h3>Classic White Tee</h3>
+      <p>Price: ₹499</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150x150?text=T-shirt+2" alt="T-shirt 2">
+      <h3>Black Edition Tee</h3>
+      <p>Price: ₹549</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150x150?text=T-shirt+3" alt="T-shirt 3">
+      <h3>Graphic Street Tee</h3>
+      <p>Price: ₹599</p>
+    </div>
+  </section>
 
-<style>
-  .next-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #28a745;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background 0.3s;
-  }
-  .next-btn:hover {
-    background-color: #218838;
-  }
-</style>
+  <section id="contact" class="contact">
+    <h2>Contact & Payment Info</h2>
+    <p><strong>Mobile:</strong> 8306091984</p>
+    <p><strong>Email:</strong> meenamamtakumari0@gmail.com</p>
+    <p><strong>Payment (UPI ID):</strong> 8619984958@ybl</p>
+    <p>To buy a t-shirt, contact me or use the UPI ID for payment and send details on WhatsApp!</p>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#contact">Contact Us</a>
+    </div>
+    <p>&copy; 2025 Shubham's T-Shirts. All rights reserved.</p>
+  </footer>
+
+  <!-- Next Button -->
+  <a href="payment.html" class="next-button">Next</a>
+
 </body>
 </html>
+
 
 
 
