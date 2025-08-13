@@ -39,9 +39,7 @@
     .products {
       display: flex;
       justify-content: center;
-      gap: 30px;
       padding: 30px;
-      flex-wrap: wrap;
     }
     .product {
       background: white;
@@ -49,11 +47,21 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       text-align: center;
-      width: 200px;
+      width: 250px;
+      cursor: pointer;
     }
     .product img {
       width: 100%;
       height: auto;
+    }
+    .product h4 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .product p {
+      font-size: 16px;
+      font-weight: bold;
+      color: green;
     }
     .info {
       background: white;
@@ -86,6 +94,46 @@
     .next-button:hover {
       background: darkorange;
     }
+    /* Popup Gallery */
+    .gallery-popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      overflow-y: auto;
+      padding-top: 50px;
+      text-align: center;
+    }
+    .gallery-popup img {
+      width: 80%;
+      max-width: 500px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    .gallery-popup button {
+      background: green;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .gallery-popup button:hover {
+      background: darkgreen;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -104,22 +152,25 @@
   <p>Discover unique designs, premium quality, and fast shipping. Shop your style now!</p>
 </div>
 
+<!-- Single Product -->
 <div class="products">
-  <div class="product">
-    <img src="https://via.placeholder.com/150" alt="T-shirt 1">
-    <h4>Classic White Tee</h4>
-    <p>Price: ₹499</p>
+  <div class="product" onclick="openGallery()">
+    <img src="tshirt1.png" alt="Happiness Bear T-Shirt">
+    <h4>Happiness Bear T-Shirt</h4>
+    <p>₹499</p>
+    <button>View Product</button>
   </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/150" alt="T-shirt 2">
-    <h4>Black Edition Tee</h4>
-    <p>Price: ₹549</p>
+</div>
+
+<!-- Popup Gallery -->
+<div id="galleryPopup" class="gallery-popup">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="gallery-images">
+    <img src="tshirt1.png" alt="Front View">
+    <img src="tshirt2.png" alt="Front Logo">
+    <img src="tshirt3.png" alt="Back View">
   </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/150" alt="T-shirt 3">
-    <h4>Graphic Street Tee</h4>
-    <p>Price: ₹599</p>
-  </div>
+  <button onclick="window.location.href='payment.html'">Buy Now</button>
 </div>
 
 <div class="info">
@@ -140,6 +191,15 @@
 <a href="payment.html">
   <button class="next-button">Next</button>
 </a>
+
+<script>
+function openGallery() {
+  document.getElementById('galleryPopup').style.display = 'block';
+}
+function closeGallery() {
+  document.getElementById('galleryPopup').style.display = 'none';
+}
+</script>
 
 </body>
 </html>
